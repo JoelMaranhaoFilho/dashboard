@@ -1,8 +1,10 @@
-import { Box, Button, TextField } from "@mui/material";
+import { Box, Button, TextField, MenuItem } from "@mui/material";
 import { Formik } from "formik";
 import * as yup from "yup";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import Header from "../../components/Header";
+
+// ... (importações anteriores)
 
 const Form = () => {
   const isNonMobile = useMediaQuery("(min-width:600px)");
@@ -37,36 +39,153 @@ const Form = () => {
                 "& > div": { gridColumn: isNonMobile ? undefined : "span 4" },
               }}
             >
+              {/* ... Outros campos existentes ... */}
+              
               <TextField
                 fullWidth
                 variant="filled"
                 type="text"
-                label="First Name"
+                label="RG"
                 onBlur={handleBlur}
                 onChange={handleChange}
-                value={values.firstName}
-                name="firstName"
-                error={!!touched.firstName && !!errors.firstName}
-                helperText={touched.firstName && errors.firstName}
-                sx={{ gridColumn: "span 2" }}
+                value={values.rg}
+                name="rg"
+                error={!!touched.rg && !!errors.rg}
+                helperText={touched.rg && errors.rg}
+                sx={{ gridColumn: "span 4" }}
               />
+              
               <TextField
                 fullWidth
                 variant="filled"
                 type="text"
-                label="Last Name"
+                label="CPF"
                 onBlur={handleBlur}
                 onChange={handleChange}
-                value={values.lastName}
-                name="lastName"
-                error={!!touched.lastName && !!errors.lastName}
-                helperText={touched.lastName && errors.lastName}
-                sx={{ gridColumn: "span 2" }}
+                value={values.cpf}
+                name="cpf"
+                error={!!touched.cpf && !!errors.cpf}
+                helperText={touched.cpf && errors.cpf}
+                sx={{ gridColumn: "span 4" }}
               />
+
+              <TextField
+                fullWidth
+                select
+                variant="filled"
+                label="Estado"
+                onBlur={handleBlur}
+                onChange={handleChange}
+                value={values.estado}
+                name="estado"
+                error={!!touched.estado && !!errors.estado}
+                helperText={touched.estado && errors.estado}
+                sx={{ gridColumn: "span 2" }}
+              >
+                {/* Opções de Estado */}
+                <MenuItem value="sp">São Paulo</MenuItem>
+                <MenuItem value="rj">Rio de Janeiro</MenuItem>
+                {/* Adicione mais estados conforme necessário */}
+              </TextField>
+
               <TextField
                 fullWidth
                 variant="filled"
                 type="text"
+                label="Cidade"
+                onBlur={handleBlur}
+                onChange={handleChange}
+                value={values.cidade}
+                name="cidade"
+                error={!!touched.cidade && !!errors.cidade}
+                helperText={touched.cidade && errors.cidade}
+                sx={{ gridColumn: "span 2" }}
+              />
+
+              <TextField
+                fullWidth
+                variant="filled"
+                type="text"
+                label="Departamento/Secretaria"
+                onBlur={handleBlur}
+                onChange={handleChange}
+                value={values.departamento}
+                name="departamento"
+                error={!!touched.departamento && !!errors.departamento}
+                helperText={touched.departamento && errors.departamento}
+                sx={{ gridColumn: "span 4" }}
+              />
+
+              <TextField
+                fullWidth
+                variant="filled"
+                type="text"
+                label="Cargo"
+                onBlur={handleBlur}
+                onChange={handleChange}
+                value={values.cargo}
+                name="cargo"
+                error={!!touched.cargo && !!errors.cargo}
+                helperText={touched.cargo && errors.cargo}
+                sx={{ gridColumn: "span 4" }}
+              />
+
+              <TextField
+                fullWidth
+                select
+                variant="filled"
+                label="Estado do Projeto"
+                onBlur={handleBlur}
+                onChange={handleChange}
+                value={values.estadoProjeto}
+                name="estadoProjeto"
+                error={!!touched.estadoProjeto && !!errors.estadoProjeto}
+                helperText={touched.estadoProjeto && errors.estadoProjeto}
+                sx={{ gridColumn: "span 2" }}
+              >
+                {/* Opções de Estado do Projeto */}
+                <MenuItem value="sp">São Paulo</MenuItem>
+                <MenuItem value="rj">Rio de Janeiro</MenuItem>
+                {/* Adicione mais estados conforme necessário */}
+              </TextField>
+
+              <TextField
+                fullWidth
+                variant="filled"
+                type="text"
+                label="Cidade do Projeto"
+                onBlur={handleBlur}
+                onChange={handleChange}
+                value={values.cidadeProjeto}
+                name="cidadeProjeto"
+                error={!!touched.cidadeProjeto && !!errors.cidadeProjeto}
+                helperText={touched.cidadeProjeto && errors.cidadeProjeto}
+                sx={{ gridColumn: "span 2" }}
+              />
+
+              <TextField
+                fullWidth
+                select
+                variant="filled"
+                label="Nome do Projeto"
+                onBlur={handleBlur}
+                onChange={handleChange}
+                value={values.nomeProjeto}
+                name="nomeProjeto"
+                error={!!touched.nomeProjeto && !!errors.nomeProjeto}
+                helperText={touched.nomeProjeto && errors.nomeProjeto}
+                sx={{ gridColumn: "span 4" }}
+              >
+                {/* Opções de Nome do Projeto */}
+                <MenuItem value="projeto1">Projeto 1</MenuItem>
+                <MenuItem value="projeto2">Projeto 2</MenuItem>
+                {/* Adicione mais projetos conforme necessário */}
+              </TextField>
+
+              <TextField
+                fullWidth
+                type="text"
+                variant="filled"
                 label="Email"
                 onBlur={handleBlur}
                 onChange={handleChange}
@@ -76,45 +195,37 @@ const Form = () => {
                 helperText={touched.email && errors.email}
                 sx={{ gridColumn: "span 4" }}
               />
+
               <TextField
                 fullWidth
+                type="password"
                 variant="filled"
-                type="text"
-                label="Contact Number"
+                label="Senha"
                 onBlur={handleBlur}
                 onChange={handleChange}
-                value={values.contact}
-                name="contact"
-                error={!!touched.contact && !!errors.contact}
-                helperText={touched.contact && errors.contact}
+                value={values.senha}
+                name="senha"
+                error={!!touched.senha && !!errors.senha}
+                helperText={touched.senha && errors.senha}
                 sx={{ gridColumn: "span 4" }}
               />
+
               <TextField
                 fullWidth
+                type="file"
                 variant="filled"
-                type="text"
-                label="Address 1"
+                label="Logo do Projeto"
                 onBlur={handleBlur}
                 onChange={handleChange}
-                value={values.address1}
-                name="address1"
-                error={!!touched.address1 && !!errors.address1}
-                helperText={touched.address1 && errors.address1}
+                value={values.logoProjeto}
+                name="logoProjeto"
+                error={!!touched.logoProjeto && !!errors.logoProjeto}
+                helperText={touched.logoProjeto && errors.logoProjeto}
                 sx={{ gridColumn: "span 4" }}
               />
-              <TextField
-                fullWidth
-                variant="filled"
-                type="text"
-                label="Address 2"
-                onBlur={handleBlur}
-                onChange={handleChange}
-                value={values.address2}
-                name="address2"
-                error={!!touched.address2 && !!errors.address2}
-                helperText={touched.address2 && errors.address2}
-                sx={{ gridColumn: "span 4" }}
-              />
+
+              {/* ... Outros campos existentes ... */}
+
             </Box>
             <Box display="flex" justifyContent="end" mt="20px">
               <Button type="submit" color="secondary" variant="contained">
@@ -132,23 +243,37 @@ const phoneRegExp =
   /^((\+[1-9]{1,4}[ -]?)|(\([0-9]{2,3}\)[ -]?)|([0-9]{2,4})[ -]?)*?[0-9]{3,4}[ -]?[0-9]{3,4}$/;
 
 const checkoutSchema = yup.object().shape({
-  firstName: yup.string().required("required"),
-  lastName: yup.string().required("required"),
+  // ... Outras validações existentes ...
+
+  rg: yup.string().required("required"),
+  cpf: yup.string().required("required"),
+  estado: yup.string().required("required"),
+  cidade: yup.string().required("required"),
+  departamento: yup.string().required("required"),
+  cargo: yup.string().required("required"),
+  estadoProjeto: yup.string().required("required"),
+  cidadeProjeto: yup.string().required("required"),
+  nomeProjeto: yup.string().required("required"),
   email: yup.string().email("invalid email").required("required"),
-  contact: yup
-    .string()
-    .matches(phoneRegExp, "Phone number is not valid")
-    .required("required"),
-  address1: yup.string().required("required"),
-  address2: yup.string().required("required"),
+  senha: yup.string().required("required"),
+  logoProjeto: yup.mixed().required("required").nullable(),
 });
+
 const initialValues = {
-  firstName: "",
-  lastName: "",
+  // ... Outros valores iniciais existentes ...
+
+  rg: "",
+  cpf: "",
+  estado: "",
+  cidade: "",
+  departamento: "",
+  cargo: "",
+  estadoProjeto: "",
+  cidadeProjeto: "",
+  nomeProjeto: "",
   email: "",
-  contact: "",
-  address1: "",
-  address2: "",
+  senha: "",
+  logoProjeto: null,
 };
 
 export default Form;
