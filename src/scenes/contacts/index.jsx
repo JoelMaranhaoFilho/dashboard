@@ -6,48 +6,48 @@ import Header from "../../components/Header";
 import { useTheme } from "@mui/material";
 
 const Contacts = () => {
-  const theme = useTheme();
-  const colors = tokens(theme.palette.mode);
+  const tema = useTheme();
+  const cores = tokens(tema.palette.mode);
 
-  const columns = [
+  const colunas = [
     { field: "id", headerName: "ID", flex: 0.5 },
-    { field: "registrarId", headerName: "Registrar ID" },
+    { field: "registrarId", headerName: "ID do Registro" },
     {
       field: "name",
-      headerName: "Name",
+      headerName: "Nome",
       flex: 1,
       cellClassName: "name-column--cell",
     },
     {
       field: "age",
-      headerName: "Age",
+      headerName: "Idade",
       type: "number",
       headerAlign: "left",
       align: "left",
     },
     {
       field: "phone",
-      headerName: "Phone Number",
+      headerName: "Número de Telefone",
       flex: 1,
     },
     {
       field: "email",
-      headerName: "Email",
+      headerName: "E-mail",
       flex: 1,
     },
     {
       field: "address",
-      headerName: "Address",
+      headerName: "Endereço",
       flex: 1,
     },
     {
       field: "city",
-      headerName: "City",
+      headerName: "Cidade",
       flex: 1,
     },
     {
       field: "zipCode",
-      headerName: "Zip Code",
+      headerName: "CEP",
       flex: 1,
     },
   ];
@@ -55,8 +55,8 @@ const Contacts = () => {
   return (
     <Box m="20px">
       <Header
-        title="CONTACTS"
-        subtitle="List of Contacts for Future Reference"
+        title="CONTATOS"
+        subtitle="Lista de Contatos para Referência Futura"
       />
       <Box
         m="40px 0 0 0"
@@ -69,30 +69,30 @@ const Contacts = () => {
             borderBottom: "none",
           },
           "& .name-column--cell": {
-            color: colors.greenAccent[300],
+            color: cores.greenAccent[300],
           },
           "& .MuiDataGrid-columnHeaders": {
-            backgroundColor: colors.blueAccent[700],
+            backgroundColor: cores.blueAccent[700],
             borderBottom: "none",
           },
           "& .MuiDataGrid-virtualScroller": {
-            backgroundColor: colors.primary[400],
+            backgroundColor: cores.primary[400],
           },
           "& .MuiDataGrid-footerContainer": {
             borderTop: "none",
-            backgroundColor: colors.blueAccent[700],
+            backgroundColor: cores.blueAccent[700],
           },
           "& .MuiCheckbox-root": {
-            color: `${colors.greenAccent[200]} !important`,
+            color: `${cores.greenAccent[200]} !important`,
           },
           "& .MuiDataGrid-toolbarContainer .MuiButton-text": {
-            color: `${colors.grey[100]} !important`,
+            color: `${cores.grey[100]} !important`,
           },
         }}
       >
         <DataGrid
           rows={mockDataContacts}
-          columns={columns}
+          columns={colunas}
           components={{ Toolbar: GridToolbar }}
         />
       </Box>

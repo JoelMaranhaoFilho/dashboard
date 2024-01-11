@@ -12,7 +12,6 @@ import {
 } from 'react-leaflet';
 import 'leaflet/dist/leaflet.css';
 
-
 const center = [-8.047562, -34.877003]
 const rectangle = [
   [-8.0311, -34.9075],
@@ -23,7 +22,7 @@ const GeographyChart = ({ isDashboard = false }) => {
 
   return (
     <MapContainer
-      style={{ width: 'auto', height: '200px' }}
+      style={{ width: 'auto', height: '200px', background: 'green'}}
       center={[-8.047562, -34.877003]} // Coordenadas iniciais do mapa
       zoom={13} // Nível de zoom inicial
       scrollWheelZoom={false}
@@ -44,20 +43,20 @@ const GeographyChart = ({ isDashboard = false }) => {
         <LayerGroup>
           <Circle
             center={center}
-            pathOptions={{ fillColor: 'blue' }}
+            pathOptions={{ fillColor: 'orange' }}
             radius={200}
           />
           <Circle
             center={center}
-            pathOptions={{ fillColor: 'red' }}
+            pathOptions={{ fillColor: '#f00505' }}
             radius={100}
             stroke={false}
           />
           <LayerGroup>
             <Circle
-              center={[51.51, -0.08]}
+              center={[-8.0564, -34.8970]}
               pathOptions={{ color: 'green', fillColor: 'green' }}
-              radius={100}
+              radius={200}
             />
           </LayerGroup>
         </LayerGroup>

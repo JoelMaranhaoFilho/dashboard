@@ -21,12 +21,12 @@ const Dashboard = () => {
     <Box m="20px">
       {/* HEADER */}
       <Box display="flex" justifyContent="space-between" alignItems="center">
-        <Header title="DASHBOARD CATCH+" subtitle="Educação Profissional e Desenvolvimento Econômico" />
+        <Header title="DASHBOARD CATCH" subtitle="Educação Profissional e Desenvolvimento Econômico" />
 
         <Box>
           <Button
             sx={{
-              backgroundColor: colors.blueAccent[1100],
+              border: '1px solid', color: colors.grey[100], 
               color: colors.grey[100],
               fontSize: "14px",
               fontWeight: "bold",
@@ -55,13 +55,15 @@ const Dashboard = () => {
           justifyContent="center"
         >
           <StatBox
+            sx={{ color: colors.greenAccent[1100], fontSize: "26px" }}
+            style={{ color: colors.grey[100] }}
             title=""
             subtitle="Construção civil"
             progress="0.75"
             increase="+14%"
             icon={
               <EmailIcon
-                //*sx={{ color: colors.greenAccent[1100], fontSize: "26px" }}
+                sx={{ color: colors.greenAccent[600], fontSize: "26px" }}
               />
             }
           />
