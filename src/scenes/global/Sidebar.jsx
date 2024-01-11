@@ -179,14 +179,14 @@ const Sidebar = () => {
               Gráficos
             </Typography>
             <Item
-              title="Grafico de Barra"
+              title="Grafico de Pizza"
               to="/bar"
               icon={<BarChartOutlinedIcon />}
               selected={selected}
               setSelected={setSelected}
             />
             <Item
-              title="gráfico de pizza"
+              title="Gráfico de Barra"
               to="/pie"
               icon={<PieChartOutlineOutlinedIcon />}
               selected={selected}

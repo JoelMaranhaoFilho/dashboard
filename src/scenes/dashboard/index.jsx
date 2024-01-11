@@ -57,8 +57,8 @@ const Dashboard = () => {
           <StatBox
             sx={{ color: colors.greenAccent[1100], fontSize: "26px" }}
             style={{ color: colors.grey[100] }}
-            title=""
-            subtitle="Construção civil"
+            title="Construção civil"
+            subtitle=""
             progress="0.75"
             increase="+14%"
             icon={
@@ -76,8 +76,8 @@ const Dashboard = () => {
           justifyContent="center"
         >
           <StatBox
-            title=""
-            subtitle="Mecanica"
+            title="Mecanica"
+            subtitle=""
             progress="0.50"
             increase="+21%"
             icon={
@@ -95,8 +95,8 @@ const Dashboard = () => {
           justifyContent="center"
         >
           <StatBox
-            title=""
-            subtitle="Comércio"
+            title="Comércio"
+            subtitle=""
             progress="0.30"
             increase="+5%"
             icon={
@@ -114,8 +114,8 @@ const Dashboard = () => {
           justifyContent="center"
         >
           <StatBox
-            title=""
-            subtitle="Aulas"
+            title="Aulas"
+            subtitle=""
             progress="0.80"
             increase="+43%"
             icon={

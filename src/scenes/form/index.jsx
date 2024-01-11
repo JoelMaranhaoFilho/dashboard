@@ -3,6 +3,7 @@ import { Formik } from "formik";
 import * as yup from "yup";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import Header from "../../components/Header";
+import CloudUploadIcon from '@mui/icons-material/CloudUpload';
 
 // ... (importações anteriores)
 
@@ -209,21 +210,36 @@ const Form = () => {
                 helperText={touched.senha && errors.senha}
                 sx={{ gridColumn: "span 4" }}
               />
-
-              <TextField
-                fullWidth
-                type="file"
-                variant="filled"
-                label="Logo do Projeto"
-                onBlur={handleBlur}
-                onChange={handleChange}
-                value={values.logoProjeto}
-                name="logoProjeto"
-                error={!!touched.logoProjeto && !!errors.logoProjeto}
-                helperText={touched.logoProjeto && errors.logoProjeto}
-                sx={{ gridColumn: "span 4" }}
-              />
-
+<Box
+  display="flex"
+  flexDirection="column"
+  alignItems="center"
+  sx={{ gridColumn: "span 4" }}
+>
+  <input
+    accept="image/*"
+    style={{ display: 'none' }}
+    id="logo-projeto-upload"
+    type="file"
+    onChange={(event) => {
+      handleChange(event);
+      values.logoProjeto = event.currentTarget.files[0];
+    }}
+  />
+  <label htmlFor="logo-projeto-upload">
+    <Button
+      variant="contained"
+      component="span"
+      startIcon={<CloudUploadIcon />}
+    >
+      Upload Logo
+    </Button>
+  </label>
+  {values.logoProjeto && <span>{values.logoProjeto.name}</span>}
+  {touched.logoProjeto && errors.logoProjeto && (
+    <span>{errors.logoProjeto}</span>
+  )}
+</Box>
               {/* ... Outros campos existentes ... */}
 
             </Box>
