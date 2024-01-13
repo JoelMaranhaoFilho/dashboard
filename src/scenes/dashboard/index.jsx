@@ -12,13 +12,15 @@ import GeographyChart from "../../components/GeographyChart";
 import BarChart from "../../components/BarChart";
 import StatBox from "../../components/StatBox";
 import ProgressCircle from "../../components/ProgressCircle";
+import { PieChart } from "recharts";
+import CustomBarChart from "../../components/PieChart";
 
 const Dashboard = () => {
   const theme = useTheme();
   const colors = tokens(theme.palette.mode);
 
   return (
-    <Box m="20px">
+    <Box m="20px" alignItems="flex-start">
       {/* HEADER */}
       <Box display="flex" justifyContent="space-between" alignItems="center">
         <Header title="DASHBOARD CATCH" subtitle="Educação Profissional e Desenvolvimento Econômico" />
@@ -163,8 +165,8 @@ const Dashboard = () => {
               </IconButton>
             </Box>
           </Box>
-          <Box height="250px" m="-20px 0 0 0">
-            <LineChartone isDashboard={true} />
+          <Box  m="1px 0 0 0">
+            <CustomBarChart isDashboard={true} />
           </Box>
         </Box>
         <Box
@@ -228,14 +230,16 @@ const Dashboard = () => {
           <Typography variant="h5" fontWeight="600">
             Demanda por Habilidades
           </Typography>
-          <Box
-            display="flex"
-            flexDirection="column"
-            alignItems="center"
-            mt="30px"
-          >            
+
+          <Box 
+          height="250"
+          mt="30px"
+        
+          >           
             
-          </Box>
+            < LineChartone  isDashboard={true}/>
+            
+            </Box>
         </Box>
         <Box
           gridColumn="span 4"
