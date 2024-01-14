@@ -12,70 +12,65 @@ const FAQ = () => {
   const colors = tokens(theme.palette.mode);
   return (
     <Box m="20px">
-      <Header title="FAQ" subtitle="Frequently Asked Questions Page" />
+      <Header title="Perguntas Frequentes" subtitle="Página de Perguntas Frequentes" />
 
       <Accordion defaultExpanded>
         <AccordionSummary expandIcon={<ExpandMoreIcon />}>
           <Typography color={colors.greenAccent[500]} variant="h5">
-            An Important Question
+             Como o Gráfico de Rosca representa a Taxa de Empregabilidade?
           </Typography>
         </AccordionSummary>
         <AccordionDetails>
           <Typography>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-            malesuada lacus ex, sit amet blandit leo lobortis eget.
+            O Gráfico de Rosca visualiza a Taxa de Empregabilidade usando fatias para mostrar categorias como "Empregados" e "Desempregados", proporcionando uma visão clara.
           </Typography>
         </AccordionDetails>
       </Accordion>
       <Accordion defaultExpanded>
         <AccordionSummary expandIcon={<ExpandMoreIcon />}>
           <Typography color={colors.greenAccent[500]} variant="h5">
-            Another Important Question
+             Qual a principal característica do Gráfico de Área Empilhada para a Taxa de Retenção no Emprego?
           </Typography>
         </AccordionSummary>
         <AccordionDetails>
           <Typography>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-            malesuada lacus ex, sit amet blandit leo lobortis eget.
+            O Gráfico de Área Empilhada destaca visualmente a Taxa de Retenção no Emprego ao longo do tempo, com camadas empilhadas que representam diferentes períodos.
           </Typography>
         </AccordionDetails>
       </Accordion>
       <Accordion defaultExpanded>
         <AccordionSummary expandIcon={<ExpandMoreIcon />}>
           <Typography color={colors.greenAccent[500]} variant="h5">
-            Your Favorite Question
+             Como o Gráfico de Barra Empilhada Horizontal retrata a Demanda por Habilidades?
           </Typography>
         </AccordionSummary>
         <AccordionDetails>
           <Typography>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-            malesuada lacus ex, sit amet blandit leo lobortis eget.
+             O Gráfico de Barra Empilhada Horizontal representa a Demanda por Habilidades usando barras que mostram intensidade, facilitando a análise da distribuição da demanda.
           </Typography>
         </AccordionDetails>
       </Accordion>
       <Accordion defaultExpanded>
         <AccordionSummary expandIcon={<ExpandMoreIcon />}>
           <Typography color={colors.greenAccent[500]} variant="h5">
-            Some Random Question
+             O que representa o Mapa de Calor (Heatmap) no contexto da Demanda por Habilidades por Região?
           </Typography>
         </AccordionSummary>
         <AccordionDetails>
           <Typography>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-            malesuada lacus ex, sit amet blandit leo lobortis eget.
+             O Mapa de Calor oferece uma visão geográfica da Demanda por Habilidades, colorindo regiões com diferentes intensidades, destacando padrões regionais.
           </Typography>
         </AccordionDetails>
       </Accordion>
       <Accordion defaultExpanded>
         <AccordionSummary expandIcon={<ExpandMoreIcon />}>
           <Typography color={colors.greenAccent[500]} variant="h5">
-            The Final Question
+             Por que considerar a inclusão de um Mapa de Calor no Dashboard?
           </Typography>
         </AccordionSummary>
         <AccordionDetails>
           <Typography>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-            malesuada lacus ex, sit amet blandit leo lobortis eget.
+             A inclusão de um Mapa de Calor enriquece o Dashboard, proporcionando insights geográficos sobre a Demanda por Habilidades, facilitando decisões informadas.
           </Typography>
         </AccordionDetails>
       </Accordion>

@@ -2,10 +2,10 @@ import { Box, Button, IconButton, Typography, useTheme } from "@mui/material";
 import { tokens } from "../../theme";
 import { mockTransactions } from "../../data/mockData";
 import DownloadOutlinedIcon from "@mui/icons-material/DownloadOutlined";
-import EmailIcon from "@mui/icons-material/Email";
-import PointOfSaleIcon from "@mui/icons-material/PointOfSale";
-import PersonAddIcon from "@mui/icons-material/PersonAdd";
-import TrafficIcon from "@mui/icons-material/Traffic";
+import ConstructionIcon from "@mui/icons-material/Construction";
+import BuildCircleIcon from "@mui/icons-material/BuildCircle";
+import StoreIcon from "@mui/icons-material/Store";
+import SchoolIcon from "@mui/icons-material/School";
 import Header from "../../components/Header";
 import LineChartone from "../../components/LineChartone";
 import GeographyChart from "../../components/GeographyChart";
@@ -36,11 +36,10 @@ const Dashboard = () => {
             }}
           >
             <DownloadOutlinedIcon sx={{ mr: "10px" }} />
-            Download Reports
+            Baixar relatórios
           </Button>
         </Box>
       </Box>
-
       {/* GRID & CHARTS */}
       <Box
         display="grid"
@@ -64,8 +63,8 @@ const Dashboard = () => {
             progress="0.75"
             increase="+14%"
             icon={
-              <EmailIcon
-                sx={{ color: colors.greenAccent[600], fontSize: "26px" }}
+              <ConstructionIcon
+                sx={{ color: colors.greenAccent[600], fontSize: "50px" }}
               />
             }
           />
@@ -83,8 +82,8 @@ const Dashboard = () => {
             progress="0.50"
             increase="+21%"
             icon={
-              <PointOfSaleIcon
-                sx={{ color: colors.greenAccent[600], fontSize: "26px" }}
+              <BuildCircleIcon
+                sx={{ color: colors.greenAccent[500], fontSize: "50px" }}
               />
             }
           />
@@ -102,8 +101,8 @@ const Dashboard = () => {
             progress="0.30"
             increase="+5%"
             icon={
-              <PersonAddIcon
-                sx={{ color: colors.greenAccent[600], fontSize: "26px" }}
+              <StoreIcon
+                sx={{ color: colors.greenAccent[500], fontSize: "50px" }}
               />
             }
           />
@@ -121,8 +120,8 @@ const Dashboard = () => {
             progress="0.80"
             increase="+43%"
             icon={
-              <TrafficIcon
-                sx={{ color: colors.greenAccent[600], fontSize: "26px" }}
+              <SchoolIcon
+                sx={{ color: colors.greenAccent[500], fontSize: "50px" }}
               />
             }
           />
@@ -188,36 +187,37 @@ const Dashboard = () => {
             </Typography>
           </Box>
           {mockTransactions.map((transaction, i) => (
-            <Box
-              key={`${transaction.txId}-${i}`}
-              display="flex"
-              justifyContent="space-between"
-              alignItems="center"
-              borderBottom={`4px solid ${colors.primary[500]}`}
-              p="15px"
-            >
-              <Box>
-                <Typography
-                  color={colors.greenAccent[500]}
-                  variant="h5"
-                  fontWeight="600"
-                >
-                  {transaction.txId}
-                </Typography>
-                <Typography color={colors.grey[100]}>
-                  {transaction.user}
-                </Typography>
-              </Box>
-              <Box color={colors.grey[100]}>{transaction.date}</Box>
-              <Box
-                backgroundColor={colors.greenAccent[500]}
-                p="5px 10px"
-                borderRadius="4px"
-              >
-                ${transaction.cost}
-              </Box>
-            </Box>
-          ))}
+  <Box
+    key={`${transaction.txId}-${i}`}
+    display="flex"
+    justifyContent="space-between"
+    alignItems="center"
+    borderBottom={`4px solid ${colors.primary[500]}`}
+    p="15px"
+  >
+    <Box>
+      <Typography
+        color={colors.greenAccent[400]}
+        variant="h5"
+        fontWeight="600"
+      >
+        {transaction.txId}
+      </Typography>
+      <Typography color={colors.grey[100]}>
+        {transaction.user}
+      </Typography>
+    </Box>
+    <Box color={colors.grey[300]}>{transaction.date}</Box>
+    <Box
+      backgroundColor={colors.greenAccent[400]}
+      color={colors.greenAccent[100]}
+      p="5px 10px"
+      borderRadius="4px"
+    >
+      {i === 0 ? 600 : i === 1 ? 420 : i === 2 ? 380 : ''}
+    </Box>
+  </Box>
+  ))}
         </Box>
 
         {/* ROW 3 */}

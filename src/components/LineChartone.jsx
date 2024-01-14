@@ -61,13 +61,18 @@ const data = [
             bottom: 0,
           }}
         >
+           <defs>
+            <linearGradient id="gradient" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="60%" stopColor="#8DFF87" stopOpacity={0.8} />
+              <stop offset="350%" stopColor="#94CD91" stopOpacity={0} />
+            </linearGradient>
+          </defs>
           
           <XAxis dataKey="name" />
           <YAxis />
           <Tooltip /> 
-          <Area type="monotone" dataKey="uv" stackId="1" stroke="#C9C8C3" fill="#C9C8C3" />
-          <Area type="monotone" dataKey="pv" stackId="1" stroke="#0F4B7F" fill="#0F4B7F" />
-          <Area type="monotone" dataKey="amt" stackId="1" stroke="##D4B78D" fill="#D4B78D" />
+          <Area type="monotone" dataKey="uv" stackId="1" fill="url(#gradient)" />
+          
         </AreaChart>
       </ResponsiveContainer>
       </div>
