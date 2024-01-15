@@ -5,8 +5,6 @@ import useMediaQuery from "@mui/material/useMediaQuery";
 import Header from "../../components/Header";
 import CloudUploadIcon from '@mui/icons-material/CloudUpload';
 
-// ... (importações anteriores)
-
 const Form = () => {
   const isNonMobile = useMediaQuery("(min-width:600px)");
 
@@ -40,8 +38,6 @@ const Form = () => {
                 "& > div": { gridColumn: isNonMobile ? undefined : "span 4" },
               }}
             >
-              {/* ... Outros campos existentes ... */}
-              
               <TextField
                 fullWidth
                 variant="filled"
@@ -83,10 +79,8 @@ const Form = () => {
                 helperText={touched.estado && errors.estado}
                 sx={{ gridColumn: "span 2" }}
               >
-                {/* Opções de Estado */}
                 <MenuItem value="sp">São Paulo</MenuItem>
                 <MenuItem value="rj">Rio de Janeiro</MenuItem>
-                {/* Adicione mais estados conforme necessário */}
               </TextField>
 
               <TextField
@@ -144,10 +138,8 @@ const Form = () => {
                 helperText={touched.estadoProjeto && errors.estadoProjeto}
                 sx={{ gridColumn: "span 2" }}
               >
-                {/* Opções de Estado do Projeto */}
                 <MenuItem value="sp">São Paulo</MenuItem>
                 <MenuItem value="rj">Rio de Janeiro</MenuItem>
-                {/* Adicione mais estados conforme necessário */}
               </TextField>
 
               <TextField
@@ -177,10 +169,8 @@ const Form = () => {
                 helperText={touched.nomeProjeto && errors.nomeProjeto}
                 sx={{ gridColumn: "span 4" }}
               >
-                {/* Opções de Nome do Projeto */}
                 <MenuItem value="projeto1">Projeto 1</MenuItem>
                 <MenuItem value="projeto2">Projeto 2</MenuItem>
-                {/* Adicione mais projetos conforme necessário */}
               </TextField>
 
               <TextField
@@ -240,8 +230,6 @@ const Form = () => {
     <span>{errors.logoProjeto}</span>
   )}
 </Box>
-              {/* ... Outros campos existentes ... */}
-
             </Box>
             <Box display="flex" justifyContent="end" mt="20px">
               <Button type="submit" color="secondary" variant="contained">
@@ -259,7 +247,6 @@ const phoneRegExp =
   /^((\+[1-9]{1,4}[ -]?)|(\([0-9]{2,3}\)[ -]?)|([0-9]{2,4})[ -]?)*?[0-9]{3,4}[ -]?[0-9]{3,4}$/;
 
 const checkoutSchema = yup.object().shape({
-  // ... Outras validações existentes ...
 
   rg: yup.string().required("required"),
   cpf: yup.string().required("required"),
@@ -276,7 +263,6 @@ const checkoutSchema = yup.object().shape({
 });
 
 const initialValues = {
-  // ... Outros valores iniciais existentes ...
 
   rg: "",
   cpf: "",

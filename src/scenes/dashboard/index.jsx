@@ -11,8 +11,6 @@ import LineChartone from "../../components/LineChartone";
 import GeographyChart from "../../components/GeographyChart";
 import BarChart from "../../components/BarChart";
 import StatBox from "../../components/StatBox";
-import ProgressCircle from "../../components/ProgressCircle";
-import { PieChart } from "recharts";
 import CustomBarChart from "../../components/PieChart";
 
 const Dashboard = () => {
@@ -238,11 +236,8 @@ const Dashboard = () => {
           <Box 
           height="250"
           mt="30px"
-        
-          >           
-            
+          >
             < LineChartone  isDashboard={true}/>
-            
             </Box>
         </Box>
         <Box
@@ -270,7 +265,6 @@ const Dashboard = () => {
           <Typography
             variant="h5"
             fontWeight="600"
-            
             sx={{ marginBottom: "15px" }}
           >
             Habilidades por Região
