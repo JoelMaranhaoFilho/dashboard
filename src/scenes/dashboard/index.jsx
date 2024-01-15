@@ -54,6 +54,7 @@ const Dashboard = () => {
           display="flex"
           alignItems="center"
           justifyContent="center"
+          boxShadow={colors.degrade[100]}
         >
           <StatBox
             sx={{ color: colors.greenAccent[1100], fontSize: "26px" }}
@@ -64,7 +65,7 @@ const Dashboard = () => {
             increase="+14%"
             icon={
               <ConstructionIcon
-                sx={{ color: colors.greenAccent[600], fontSize: "50px" }}
+                sx={{ color: colors.greenAccent[1200], fontSize: "50px" }}
               />
             }
           />
@@ -75,6 +76,7 @@ const Dashboard = () => {
           display="flex"
           alignItems="center"
           justifyContent="center"
+          boxShadow={colors.degrade[100]}
         >
           <StatBox
             title="Mecanica"
@@ -83,7 +85,7 @@ const Dashboard = () => {
             increase="+21%"
             icon={
               <BuildCircleIcon
-                sx={{ color: colors.greenAccent[500], fontSize: "50px" }}
+                sx={{ color: colors.greenAccent[1200], fontSize: "50px" }}
               />
             }
           />
@@ -94,6 +96,7 @@ const Dashboard = () => {
           display="flex"
           alignItems="center"
           justifyContent="center"
+          boxShadow={colors.degrade[100]}
         >
           <StatBox
             title="Comércio"
@@ -102,7 +105,7 @@ const Dashboard = () => {
             increase="+5%"
             icon={
               <StoreIcon
-                sx={{ color: colors.greenAccent[500], fontSize: "50px" }}
+                sx={{ color: colors.greenAccent[1200], fontSize: "50px" }}
               />
             }
           />
@@ -113,6 +116,7 @@ const Dashboard = () => {
           display="flex"
           alignItems="center"
           justifyContent="center"
+          boxShadow={colors.degrade[100]}
         >
           <StatBox
             title="Aulas"
@@ -121,7 +125,7 @@ const Dashboard = () => {
             increase="+43%"
             icon={
               <SchoolIcon
-                sx={{ color: colors.greenAccent[500], fontSize: "50px" }}
+                sx={{ color: colors.greenAccent[1200], fontSize: "50px" }}
               />
             }
           />
@@ -146,7 +150,7 @@ const Dashboard = () => {
                 fontWeight="600"
                 color={colors.grey[100]}
               >
-                Taxa de Retenção no Emprego
+                Demanda por Habilidades
               </Typography>
               <Typography
                 variant="h3"
@@ -159,7 +163,7 @@ const Dashboard = () => {
             <Box>
               <IconButton>
                 <DownloadOutlinedIcon
-                  sx={{ fontSize: "26px", color: colors.greenAccent[500] }}
+                  sx={{ fontSize: "26px", color: colors.greenAccent[1200] }}
                 />
               </IconButton>
             </Box>
@@ -171,14 +175,14 @@ const Dashboard = () => {
         <Box
           gridColumn="span 4"
           gridRow="span 2"
-          backgroundColor={colors.primary[400]}
+          backgroundColor={colors.primary[400]} // cor do box do quadro geral
           overflow="auto"
         >
           <Box
             display="flex"
             justifyContent="space-between"
             alignItems="center"
-            borderBottom={`4px solid ${colors.primary[500]}`}
+            borderBottom={`4px solid ${colors.primary[100]}`}
             colors={colors.grey[1100]}
             p="15px"
           >
@@ -192,12 +196,12 @@ const Dashboard = () => {
     display="flex"
     justifyContent="space-between"
     alignItems="center"
-    borderBottom={`4px solid ${colors.primary[500]}`}
+    borderBottom={`4px solid ${colors.primary[100]}`}
     p="15px"
   >
     <Box>
       <Typography
-        color={colors.greenAccent[400]}
+        color={colors.grey[100]} //Coloração do subtitle no Quadro Geral
         variant="h5"
         fontWeight="600"
       >
@@ -207,10 +211,10 @@ const Dashboard = () => {
         {transaction.user}
       </Typography>
     </Box>
-    <Box color={colors.grey[300]}>{transaction.date}</Box>
+    <Box color={colors.grey[1100]}>{transaction.date}</Box>
     <Box
-      backgroundColor={colors.greenAccent[400]}
-      color={colors.greenAccent[100]}
+      backgroundColor={colors.greenAccent[1200]} //Coloração do "botao" do quadro geral
+      color={colors.grey[1200]}
       p="5px 10px"
       borderRadius="4px"
     >
@@ -228,7 +232,7 @@ const Dashboard = () => {
           p="30px"
         >
           <Typography variant="h5" fontWeight="600">
-            Demanda por Habilidades
+            Retenção de Emprego
           </Typography>
 
           <Box 

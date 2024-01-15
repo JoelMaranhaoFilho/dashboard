@@ -17,6 +17,7 @@ export const tokens = (mode) => ({
           900: "#141414",
           1000: "#132532",
           1100: "#FF1D01",
+          1200: "#e0e0e0"
           
 
         },
@@ -45,6 +46,8 @@ export const tokens = (mode) => ({
           900: "#0f2922",
           1000: "#132532",
           1100: "#FF1D01",
+          1200: "#2D8029",
+
         },
         redAccent: {
           100: "#f8dcdb",
@@ -73,6 +76,9 @@ export const tokens = (mode) => ({
           1100: "#FF1D01",
           
         },
+        degrade: {
+          100: "0px 0px 11px 6px rgba(128, 128, 128, 0.75)",
+        },
       }
     : {
         grey: {
@@ -87,6 +93,7 @@ export const tokens = (mode) => ({
           900: "#e0e0e0",
           1000: "#132532",
           1100: "#FF1D01",
+          1200: "#e0e0e0"
         },
         primary: {
           100: "#040509",
@@ -113,6 +120,7 @@ export const tokens = (mode) => ({
           900: "#dbf5ee",
           1000: "#132532",
           1100: "#FF1D01",
+          1200: "#2D8029",
         },
         redAccent: {
           100: "#2c100f",
@@ -140,6 +148,9 @@ export const tokens = (mode) => ({
           1000: "#132532",
           1100: "#FF1D01",
         },
+        degrade: {
+          100: "0px 0px 11px 6px rgba(128, 128, 128, 0.75)",
+        }
       }),
 });
 

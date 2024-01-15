@@ -42,11 +42,7 @@ const GeographyChart = ({ isDashboard = false }) => {
       </LayersControl.Overlay>
       <LayersControl.Overlay checked name="Layer group with circles">
         <LayerGroup>
-          <Circle
-            center={center}
-            pathOptions={{ fillColor: 'orange' }}
-            radius={200}
-          />
+          
           <Circle
             center={center}
             pathOptions={{ color: 'red', fillColor: '#f00505' }}
@@ -57,15 +53,18 @@ const GeographyChart = ({ isDashboard = false }) => {
           <LayerGroup>
             <Circle
               center={[-8.0564, -34.8970]}
-              pathOptions={{ color: '#FF8C00', fillColor: '#f00505' }}
-              radius={400}
+              pathOptions={{  fillColor: '#ff4800' }}
+              
+            radius={1100}
+            stroke={false}
             />
           </LayerGroup>
           <LayerGroup>
             <Circle
               center={[-8.0281, -34.9191]}
-              pathOptions={{ color: '#006400', fillColor: '#f00505' }}
-              radius={400}
+              pathOptions={{ fillColor: '#006400' }}
+            radius={1100}
+            stroke={false}
             />
           </LayerGroup>
         </LayerGroup>

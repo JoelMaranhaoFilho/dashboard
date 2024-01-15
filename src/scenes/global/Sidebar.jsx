@@ -107,9 +107,9 @@ const Sidebar = () => {
                   fontWeight="bold"
                   sx={{ m: "10px 0 0 0" }}
                 >
-                  Eraldo
+                  Enzo Henrique
                 </Typography>
-                <Typography variant="h5" color={colors.greenAccent[500]}>
+                <Typography variant="h5" color={colors.grey[100]}>
                   Secretaria de trabalho <br/> Gestor de Projetos <br/> Pernambuco Recife 
                 </Typography>
               </Box>
@@ -150,21 +150,21 @@ const Sidebar = () => {
             Páginas
             </Typography>
             <Item
-              title="Formúlario"
+              title="Formulário"
               to="/form"
               icon={<PersonOutlinedIcon />}
               selected={selected}
               setSelected={setSelected}
             />
             <Item
-              title="Caléndario"
+              title="Calendário"
               to="/calendar"
               icon={<CalendarTodayOutlinedIcon />}
               selected={selected}
               setSelected={setSelected}
             />
             <Item
-              title="Suporte"
+              title="Perguntas Frequentes"
               to="/faq"
               icon={<HelpOutlineOutlinedIcon />}
               selected={selected}
@@ -179,7 +179,7 @@ const Sidebar = () => {
               Gráficos
             </Typography>
             <Item
-              title="Grafico de Pizza"
+              title="Gráfico de Pizza"
               to="/bar"
               icon={<BarChartOutlinedIcon />}
               selected={selected}
