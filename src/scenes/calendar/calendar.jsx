@@ -14,6 +14,7 @@ import {
 } from "@mui/material";
 import Header from "../../components/Header";
 import { tokens } from "../../theme";
+import CircularProgress from "@mui/material/CircularProgress";
 
 const Calendar = () => {
   const theme = useTheme();
@@ -48,7 +49,7 @@ const Calendar = () => {
 
   return (
     <Box m="20px">
-      <Header title="Calendario" />
+      <Header title="Calendário" />
 
       <Box display="flex" justifyContent="space-between">
         {/* CALENDAR SIDEBAR */}
@@ -58,8 +59,9 @@ const Calendar = () => {
           p="15px"
           borderRadius="4px"
         >
-          <Typography variant="h5">Evento</Typography>
-          <List>
+          <Typography variant="h5">Eventos</Typography>
+          {currentEvents.length > 0 ? (
+            <List>
             {currentEvents.map((event) => (
               <ListItem
                 key={event.id}
@@ -84,18 +86,17 @@ const Calendar = () => {
               </ListItem>
             ))}
           </List>
-        </Box>
+        ) : (
+          <Typography>Nenhum evento disponível.</Typography>
+        )}
+      </Box>
 
-        {/* CALENDAR */}
-        <Box flex="1 1 100%" ml="15px">
+      {/* CALENDAR */}
+      <Box flex="1 1 100%" ml="15px">
+        {currentEvents.length > 0 ? (
           <FullCalendar
             height="75vh"
-            plugins={[
-              dayGridPlugin,
-              timeGridPlugin,
-              interactionPlugin,
-              listPlugin,
-            ]}
+            plugins={[dayGridPlugin, timeGridPlugin, interactionPlugin, listPlugin]}
             headerToolbar={{
               left: "prev,next today",
               center: "title",
@@ -121,11 +122,14 @@ const Calendar = () => {
                 date: "2024-09-28",
               },
             ]}
-          />
+            />
+            ) : (
+              <CircularProgress />
+            )}
+          </Box>
         </Box>
       </Box>
-    </Box>
-  );
-};
+    );
+  };
 
 export default Calendar;

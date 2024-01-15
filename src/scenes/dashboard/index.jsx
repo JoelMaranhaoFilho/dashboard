@@ -47,7 +47,7 @@ const Dashboard = () => {
       >
         {/* ROW 1 */}
         <Box
-          gridColumn="span 3"
+          gridColumn={{ xs: 'span 12', md: 'span 3' }}
           backgroundColor={colors.primary[400]}
           display="flex"
           alignItems="center"
@@ -69,7 +69,7 @@ const Dashboard = () => {
           />
         </Box>
         <Box
-          gridColumn="span 3"
+          gridColumn={{ xs: 'span 12', md: 'span 3' }}
           backgroundColor={colors.primary[400]}
           display="flex"
           alignItems="center"
@@ -89,7 +89,7 @@ const Dashboard = () => {
           />
         </Box>
         <Box
-          gridColumn="span 3"
+          gridColumn={{ xs: 'span 12', md: 'span 3' }}
           backgroundColor={colors.primary[400]}
           display="flex"
           alignItems="center"
@@ -109,7 +109,7 @@ const Dashboard = () => {
           />
         </Box>
         <Box
-          gridColumn="span 3"
+          gridColumn={{ xs: 'span 12', md: 'span 3' }}
           backgroundColor={colors.primary[400]}
           display="flex"
           alignItems="center"
@@ -131,14 +131,14 @@ const Dashboard = () => {
 
         {/* ROW 2 */}
         <Box
-          gridColumn="span 8"
+          gridColumn={{ xs: 'span 12', md: 'span 8' }}
           gridRow="span 2"
           backgroundColor={colors.primary[400]}
         >
           <Box
-            mt="25px"
+            mt={{ xs: '25px', md: '0' }}
             p="0 30px"
-            display="flex "
+            display="flex"
             justifyContent="space-between"
             alignItems="center"
           >
@@ -171,7 +171,7 @@ const Dashboard = () => {
           </Box>
         </Box>
         <Box
-          gridColumn="span 4"
+          gridColumn={{ xs: 'span 12', md: 'span 4' }}
           gridRow="span 2"
           backgroundColor={colors.primary[400]} // cor do box do quadro geral
           overflow="auto"
@@ -224,40 +224,40 @@ const Dashboard = () => {
 
         {/* ROW 3 */}
         <Box
-          gridColumn="span 4"
+          gridColumn={{ xs: 'span 12', md: 'span 4' }}
           gridRow="span 2"
           backgroundColor={colors.primary[400]}
-          p="30px"
+          p={{ xs: '30px', md: '0' }}
         >
           <Typography variant="h5" fontWeight="600">
             Retenção de Emprego
           </Typography>
 
-          <Box 
-          height="250"
-          mt="30px"
+          <Box
+            height={{ xs: '250px', md: '100%' }}
+            mt={{ xs: '30px', md: '0' }}
           >
             < LineChartone  isDashboard={true}/>
             </Box>
         </Box>
         <Box
-          gridColumn="span 4"
+          gridColumn={{ xs: 'span 12', md: 'span 4' }}
           gridRow="span 2"
           backgroundColor={colors.primary[400]}
         >
           <Typography
             variant="h5"
             fontWeight="600"
-            sx={{ padding: "30px 30px 0 30px" }}
+            sx={{ padding: { xs: "30px", md: "30px 30px 0 30px" } }}
           >
             Taxa de Conclusão de Cursos
           </Typography>
-          <Box height="250px" mt="-20px">
+          <Box height={{ xs: '250px', md: '100%' }} mt={{ xs: '-20px', md: '0' }}>
             <BarChart isDashboard={true} />
           </Box>
         </Box>
         <Box
-          gridColumn="span 4"
+          gridColumn={{ xs: 'span 12', md: 'span 4' }}
           gridRow="span 2"
           backgroundColor={colors.primary[400]}
           padding="30px"
@@ -265,11 +265,11 @@ const Dashboard = () => {
           <Typography
             variant="h5"
             fontWeight="600"
-            sx={{ marginBottom: "15px" }}
+            sx={{ marginBottom: { xs: "15px", md: "0" } }}
           >
             Habilidades por Região
           </Typography>
-          <Box height="100px">
+          <Box height={{ xs: '100px', md: '100%' }}>
             <GeographyChart isDashboard={true} />
           </Box>
         </Box>

@@ -1,16 +1,17 @@
 import { Box, Typography, useTheme } from "@mui/material";
 import { tokens } from "../theme";
 import ProgressCircle from "./ProgressCircle";
+import React from "react";
 
-const StatBox = ({ title, subtitle, icon, progress, increase }) => {
+const StatBox = ({ title, subtitle, icon, progress, increase, isDashboard = false }) => {
   const theme = useTheme();
   const colors = tokens(theme.palette.mode);
 
   return (
-    <Box width="100%" m="0 30px">
+    <Box width="100%" m="0 3%" mt="2px">
       <Box display="flex" justifyContent="space-between">
         <Box>
-          {icon}
+          {React.cloneElement(icon, { fontSize: isDashboard ? 'large' : 'small' })}
           <Typography
             variant="h4"
             fontWeight="bold"

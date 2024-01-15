@@ -11,6 +11,13 @@ body,
   font-family: "Source Sans Pro", sans-serif;
 }
 
+body {
+  margin: 0;
+  font-family: 'Roboto', sans-serif; /* Substitua pela sua escolha de fonte */
+  background-color: #f0f0f0; /* Altere para a cor desejada */
+}
+
+
 .app {
   display: flex;
   position: relative;

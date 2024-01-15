@@ -23,7 +23,7 @@ const BarChart = ({ isDashboard = false }) => {
         fill="white"
         textAnchor={x > cx ? 'start' : 'end'}
         dominantBaseline="central"
-        fontSize={23} // Ajuste o tamanho da fonte conforme necessário
+        ffontSize={isDashboard ? 12 : 23} // Ajuste o tamanho da fonte conforme necessário
       >
         {`${(percent * 100).toFixed(0)}%`}
       </text>
@@ -32,16 +32,18 @@ const BarChart = ({ isDashboard = false }) => {
 
   return (
     <ResponsiveContainer width="100%" height="100%">
-      <PieChart width={400} height={400}>
+      <PieChart>
         <Pie
           data={data}
           cx="50%"
-          cy="50%"
+          cy="30%"
           labelLine={false}
           label={renderCustomizedLabel}
-          outerRadius={90} // Ajuste o raio externo conforme necessário
+          outerRadius={isDashboard ? 80 : 90} // Ajuste o raio externo conforme necessário
           fill="#8884d8"
           dataKey="value"
+          justifyContent={'center'}
+          alignContent={'center'}
         >
           {data.map((entry, index) => (
             <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />

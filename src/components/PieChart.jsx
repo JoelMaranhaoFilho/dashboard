@@ -1,5 +1,5 @@
 import React from 'react';
-import { BarChart, Bar, Cell, XAxis, YAxis, CartesianGrid } from 'recharts';
+import { BarChart, Bar, Cell, XAxis, YAxis } from 'recharts';
 
 const colors = ['#8DFF87', '#8DFF87', '#8DFF87'];
 
@@ -22,7 +22,6 @@ const data = [
     pv: 3,
     amt: 0,
   },
-  
 ];
 
 const getPath = (x, y, width, height) => {
@@ -40,25 +39,21 @@ const TriangleBar = (props) => {
 
 export default function CustomBarChart() {
   return (
-    <div style={{ width: 'auto', height: '200px',}}>
-    <BarChart
-    display="flex"
-      width={450}
-      height={230}
-      data={data}
-      
-            
-    >
-     
-      <XAxis dataKey="name" />
-      <YAxis />
-      <Bar dataKey="uv" fill="#8884d8" shape={<TriangleBar />} label={{ position: 'top' }}>
-        {data.map((entry, index) => (
-          <Cell key={`cell-${index}`} fill={colors[index % 20]} />
-        ))}
-      </Bar>
-    </BarChart>
+    <div style={{ width: '100%', height: '100%', display: 'flex', justifyContent:'center', alignContent:'center'}}>
+      <BarChart
+        width={window.innerWidth <= 900 ? window.innerWidth : 900}
+        height={250}
+        data={data}
+        
+      >
+        <XAxis dataKey="name" />
+        <YAxis />
+        <Bar dataKey="uv" fill="#8884d8" shape={<TriangleBar />} label={{ position: 'top' }}>
+          {data.map((entry, index) => (
+            <Cell key={`cell-${index}`} fill={colors[index % 30]} />
+          ))}
+        </Bar>
+      </BarChart>
     </div>
   );
 }
-

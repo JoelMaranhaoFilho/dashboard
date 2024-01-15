@@ -4,6 +4,7 @@ import { tokens } from "../../theme";
 import { mockDataContacts } from "../../data/mockData";
 import Header from "../../components/Header";
 import { useTheme } from "@mui/material";
+import CircularProgress from "@mui/material/CircularProgress";
 
 const Contacts = () => {
   const tema = useTheme();
@@ -90,11 +91,17 @@ const Contacts = () => {
           },
         }}
       >
-        <DataGrid
-          rows={mockDataContacts}
-          columns={colunas}
-          components={{ Toolbar: GridToolbar }}
-        />
+        {mockDataContacts.length > 0 ? (
+          <DataGrid
+            rows={mockDataContacts}
+            columns={colunas}
+            components={{ Toolbar: GridToolbar }}
+            pageSize={10} // Define o número padrão de linhas por página
+            sortingOrder={['asc', 'desc']} // Define a ordem padrão de ordenação
+          />
+        ) : (
+          <CircularProgress />
+        )}
       </Box>
     </Box>
   );
