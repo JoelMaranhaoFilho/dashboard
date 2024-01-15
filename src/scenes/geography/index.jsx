@@ -1,11 +1,9 @@
 import { Box, useTheme } from "@mui/material";
 import GeographyChart from "../../components/GeographyChart";
 import Header from "../../components/Header";
-import { tokens } from "../../theme";
 
 
 const Geography = () => {
-  const theme = useTheme();
   
   return (
     <div id="mapacalor">

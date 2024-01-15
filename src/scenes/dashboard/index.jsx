@@ -26,8 +26,7 @@ const Dashboard = () => {
         <Box>
           <Button
             sx={{
-              border: '1px solid', color: colors.grey[100], 
-              color: colors.grey[100],
+              border: '1px solid', color: colors.grey[100],
               fontSize: "14px",
               fontWeight: "bold",
               padding: "10px 20px",
