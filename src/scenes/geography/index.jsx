@@ -6,7 +6,7 @@ import { tokens } from "../../theme";
 
 const Geography = () => {
   const theme = useTheme();
-  const colors = tokens(theme.palette.mode);
+  
   return (
     <div id="mapacalor">
     <Box m="20px">
