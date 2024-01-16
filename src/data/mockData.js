@@ -253,7 +253,7 @@ export const mockTransactions = [
   },
   {
     txId: "Participante",
-    user: "Usando Cath",
+    user: "Usando Catch",
     date: "",
     cost: "",
   },

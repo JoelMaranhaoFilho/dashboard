@@ -104,10 +104,10 @@ const Sidebar = () => {
                   fontWeight="bold"
                   sx={{ m: "10px 0 0 0" }}
                 >
-                  Enzo Henrique
+                  Eraldo Guerra
                 </Typography>
                 <Typography variant="h5" color={colors.grey[100]}>
-                  Secretaria de trabalho <br/> Gestor de Projetos <br/> Pernambuco Recife 
+                  Secretária de trabalho <br/> Gestor de Projetos <br/> Pernambuco Recife 
                 </Typography>
               </Box>
             </Box>
