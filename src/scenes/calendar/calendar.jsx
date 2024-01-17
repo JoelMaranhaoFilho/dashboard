@@ -14,7 +14,6 @@ import {
 } from "@mui/material";
 import Header from "../../components/Header";
 import { tokens } from "../../theme";
-import CircularProgress from "@mui/material/CircularProgress";
 
 const Calendar = () => {
   const theme = useTheme();
@@ -49,7 +48,7 @@ const Calendar = () => {
 
   return (
     <Box m="20px">
-      <Header title="Calendário" />
+      <Header title="Calendario" />
 
       <Box display="flex" justifyContent="space-between">
         {/* CALENDAR SIDEBAR */}
@@ -59,14 +58,13 @@ const Calendar = () => {
           p="15px"
           borderRadius="4px"
         >
-          <Typography variant="h5">Eventos</Typography>
-          {currentEvents.length > 0 ? (
-            <List>
+          <Typography variant="h5">Evento</Typography>
+          <List>
             {currentEvents.map((event) => (
               <ListItem
                 key={event.id}
                 sx={{
-                  backgroundColor: colors.greenAccent[500],
+                  backgroundColor: colors.greenAccent[400],
                   margin: "10px 0",
                   borderRadius: "2px",
                 }}
@@ -86,17 +84,18 @@ const Calendar = () => {
               </ListItem>
             ))}
           </List>
-        ) : (
-          <Typography>Nenhum evento disponível.</Typography>
-        )}
-      </Box>
+        </Box>
 
-      {/* CALENDAR */}
-      <Box flex="1 1 100%" ml="15px">
-        {currentEvents.length > 0 ? (
+        {/* CALENDAR */}
+        <Box flex="1 1 100%" ml="15px">
           <FullCalendar
             height="75vh"
-            plugins={[dayGridPlugin, timeGridPlugin, interactionPlugin, listPlugin]}
+            plugins={[
+              dayGridPlugin,
+              timeGridPlugin,
+              interactionPlugin,
+              listPlugin,
+            ]}
             headerToolbar={{
               left: "prev,next today",
               center: "title",
@@ -122,14 +121,11 @@ const Calendar = () => {
                 date: "2024-09-28",
               },
             ]}
-            />
-            ) : (
-              <CircularProgress />
-            )}
-          </Box>
+          />
         </Box>
       </Box>
-    );
-  };
+    </Box>
+  );
+};
 
 export default Calendar;
