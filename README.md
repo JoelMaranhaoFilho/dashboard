@@ -2,8 +2,4 @@
 
 Dashboard App | React, Material UI, Data Grid, Light & Dark Mode
 
-Precisa instalar as Dependencias: 
-
-Reachart.js, 
-React-Leaflet, 
-react-router-dom,
+** Projeo integrador feita para Startup Catch como projeto final de conclusão de curso do programa "Formação Acelerada em Programação" da Softex-Recife-PE **
