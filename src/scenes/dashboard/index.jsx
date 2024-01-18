@@ -226,16 +226,26 @@ const Dashboard = () => {
           gridColumn={{ xs: 'span 12', md: 'span 4' }}
           gridRow="span 2"
           backgroundColor={colors.primary[400]}
-          p={{ xs: '30px', md: '0' }}
+          p={{ xs: '20px', md: '0' }}
         >
-          <Typography variant="h5" fontWeight="600">
-            Retenção de Emprego
-          </Typography>
-
-          <Box
-            height={{ xs: '250px', md: '100%' }}
-            mt={{ xs: '30px', md: '0' }}
+          <Typography variant="h5" 
+          fontWeight="600"
+          sx={{ padding: { xs: "30px", md: "30px 30px 0 30px" } }}
+          
           >
+            Retenção de Emprego 
+            <Box>
+              <IconButton>
+                <DownloadOutlinedIcon
+                  sx={{ fontSize: "26px", color: colors.greenAccent[1200] }}
+                />
+              </IconButton>
+            </Box>
+          </Typography>
+          
+          <Box
+            height={{ xs: '250px', md: '100%' }} mt={{ xs: '-40px', md: '0' }}>
+          
             < LineChartone  isDashboard={true}/>
             </Box>
         </Box>
@@ -247,11 +257,20 @@ const Dashboard = () => {
           <Typography
             variant="h5"
             fontWeight="600"
-            sx={{ padding: { xs: "30px", md: "30px 30px 0 30px" } }}
+            sx={{ padding: { xs: "30px", md: "25px 30px 0 30px" } }}
           >
             Taxa de Conclusão de Cursos
+
+            <Box>
+              <IconButton>
+                <DownloadOutlinedIcon
+                  sx={{ fontSize: "26px", color: colors.greenAccent[1200] }}
+                />
+              </IconButton>
+            </Box>
           </Typography>
-          <Box height={{ xs: '250px', md: '100%' }} mt={{ xs: '-20px', md: '0' }}>
+          
+          <Box height={{ xs: '275px', md: '100%' }} mt={{ xs: '-20px', md: '0' }}>
             <BarChart isDashboard={true} />
           </Box>
         </Box>
@@ -259,16 +278,16 @@ const Dashboard = () => {
           gridColumn={{ xs: 'span 12', md: 'span 4' }}
           gridRow="span 2"
           backgroundColor={colors.primary[400]}
-          padding="30px"
+          padding="10px"
         >
           <Typography
             variant="h5"
             fontWeight="600"
-            sx={{ marginBottom: { xs: "15px", md: "0" } }}
+            sx={{ padding: { xs: "40px", md: "25px 10px 0 10px" } }}
           >
             Habilidades por Região
           </Typography>
-          <Box height={{ xs: '100px', md: '100%' }}>
+          <Box height={{ xs: '250px', md: '100%' }} mt={{ xs: '-10px', md: '0' }}>
             <GeographyChart isDashboard={true} />
           </Box>
         </Box>
