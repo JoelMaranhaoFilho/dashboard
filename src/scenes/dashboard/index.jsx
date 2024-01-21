@@ -166,7 +166,7 @@ const Dashboard = () => {
             </Box>
           </Box>
           <Box  m="1px 0 0 0">
-            <CustomBarChart isDashboard={true} />
+            <CustomBarChart  />
           </Box>
         </Box>
         <Box
